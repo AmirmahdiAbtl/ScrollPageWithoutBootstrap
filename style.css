@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(./hero-bcg.jpeg) center/cover no-repeat;
+}
+nav{
+    background: transparent;
+    padding: 1rem 1.5rem;
+}
+.nav-content{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    height: 3rem;
+}
+.bars{
+    display: none;
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+}
+.nav-item{
+    display: list-item;
+    padding: 0 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.25rem;
+    color: white;
+}
+.banner{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+    place-content: center;
+}
+.main-content{
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 1.5rem;
+    font-size: 4rem;
+}
+.text-content{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    max-width: 40rem;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+.btn{
+    width: 12.25rem;
+    height: 2.25rem;
+    background: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border: 0.125rem solid #ffffff;
+    transition: all 500ms ease;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+}
+.btn:hover{
+    color: #2eb3b3;
+    background: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.bars{
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+.bars:hover{
+    color: #2eb3b3;
+}
+.bars i{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.fas{
+    pointer-events: none;
+}
+.min-menu{
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    display: none;
+}
+.min-menu li{
+    padding: 1rem;
+    cursor: pointer;
+}
+.min-menu li a{
+    letter-spacing: 0.25rem;
+    font-size: 1rem;
+    color: #2b5b7a;
+}
+.min-menu li a:hover{
+    color: #2eb3b3;
+}
+@media all and (max-width: 800px){
+    .nav-ul{
+        display: none;
+    }
+    .bars{
+        display: flex;
+    }
+    .nav{
+        background: white;
+        position: relative;
+    }
+}
+main{
+    height: 240vh;
+    background: white;
+}
+#About ,#Tours{
+background: #d5e4ea;
+}
+#About ,#Services ,#Tours{
+    height: 80vh;
+}
+.main-title{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+    padding-top: 1rem;
+}
+.nav-fixed{
+    position: fixed;
+    background: white;
+    width: 100%;
+}
