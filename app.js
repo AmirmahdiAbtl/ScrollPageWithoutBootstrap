@@ -2,6 +2,8 @@ let flag = 0;
 $(".bars").click(()=>{
     if(flag===0){
         $(".min-menu").slideDown();
+        $(".nav").addClass("white");
+        console.log($(".nav").css("background"))
         flag += 1;
         $(".nav-item").click(()=>{
             $(".min-menu").slideUp();
@@ -9,18 +11,20 @@ $(".bars").click(()=>{
         })
     }else{
         $(".min-menu").slideUp();
+        $(".nav").removeClass("white");
         flag = 0;
     }
 })
 $(document).scroll(()=>{
     const scrollTop = $(document).scrollTop();
     const navHeight = $("nav").height();
-    if(scrollTop>navHeight) {
+    if(scrollTop>=navHeight) {
         $("nav").addClass("nav-fixed");
         $(".nav-item a").css("color","black");
     }else{
         $("nav").removeClass("nav-fixed");
-        $(".nav-item a").css("color","white");
+        $(".nav").removeClass("white");
+        $(".nav-item a").css("color","black");
     }
 })
 const nav = document.getElementById("nav");
@@ -43,6 +47,7 @@ scrollLinks.forEach((link) => {
         window.scrollTo({
             left: 0,
             top: divHeight - navHeight,
+            behavior: 'smooth'
         });
         console.log(window.outerWidth);
     });
@@ -63,5 +68,6 @@ btn.addEventListener("click",()=>{
     window.scrollTo({
         left: 0,
         top: divHeight - navHeight,
+        behavior: 'smooth'
     });
 })

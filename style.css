@@ -11,6 +11,9 @@ nav{
     background: transparent;
     padding: 1rem 1.5rem;
 }
+.white{
+    background-color: #ffffff;
+}
 .nav-content{
     width: 90vw;
     max-width: 1170px;
@@ -35,7 +38,10 @@ nav img{
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
     letter-spacing: 0.25rem;
-    color: white;
+}
+.nav a{
+    text-decoration: none;
+    color: #000000;
 }
 .banner{
     display: grid;
@@ -74,7 +80,7 @@ nav img{
     color: #2eb3b3;
     background: white;
 }
-a{
+.btn a{
     text-decoration: none;
     color: white;
 }
@@ -125,7 +131,6 @@ a{
         display: flex;
     }
     .nav{
-        background: white;
         position: relative;
     }
 }
